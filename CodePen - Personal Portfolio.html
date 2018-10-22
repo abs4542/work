@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <title>CodePen - Personal Portfolio</title>
+  
+  
+  
+  <link rel="stylesheet" href="./CodePen - Personal Portfolio_files/bootstrap.css">
+
+      <style>
+      .navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+#navi li.active a{ 
+    background-color: red;
+}
+.centereddiv{
+  position:absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+a{
+  text-decoration: none !important;
+}
+button:hover{
+ background: gray;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px black;
+}
+hr{
+  height:5px;
+}
+.container-fluid{
+  position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+.myImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url("http://www.birkenhead.net.nz/site/birkenhead/files/images/business_ideas.jpg" );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    padding: 0 0 0 0;
+    height: 100%;
+    width: 100%;
+}
+.content-wrapper{
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)),url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/93/61/5957e69ae8a2d4f.jpg");
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.text-wrapper h1{
+  width: 100%;
+  position: relative;
+  color: white;
+  top: 0;
+  text-align: center;
+}
+.text-wrapper ul {
+  width: 45%;
+  padding-left: 5px;
+  margin-bottom: 0;
+  position: relative;
+  color: white;
+  font-size: 20px;
+  }
+.portFolio{
+  width: 100%;
+  height: 90%;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)),url("https://hdwallsource.com/img/2014/1/cityscape-9362-9708-hd-wallpapers.jpg");
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.col img{
+ width: 33%;
+ height: 250px;
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+
+}
+.col img:hover{
+  background: gray;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px black;
+}
+.contact{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)),url("https://www.perthmortgagespecialist.com.au/images/about/Contact-Me.jpg");
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+    </style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no">
+
+  
+  
+    <link rel="stylesheet" href="./CodePen - Personal Portfolio_files/font-awesome.min.css">
+  
+  <div class="container-fluid">
+    <div class="myImage">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#">Abdel-Razak Amadou</a>
+  
+  <ul class="ml-auto navbar-nav" id="navi">
+    <li class="nav-item">
+      <a class="nav-link current" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#Successful">Home</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link " href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#About">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#Portfolio">Portfolio</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#Contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+  <br> <br>
+  <h1 class="text-center" style="color:white"> <a name="Successful">Successful Innovations</a></h1>
+  <h4 class="text-center" style="color: white">Where dreams become reality!</h4>
+  <br>
+  <hr color="black" width="80%">
+  <div class="row centereddiv">
+    <div class="col-xs-2 col ">
+      <a href="https://www.linkedin.com/in/abdel-razak-amadou-313bb3140/" target="blank"><button type="button" class="btn btn-block" style="color: black"><i class="fa fa-linkedin"></i><b> LinkedIn</b></button></a>
+    </div> 
+    <div class="col-xs-2 col">
+      <a href="https://www.freecodecamp.org/challenges/declare-javascript-variables" target="blank" class="link">
+      <button type="button" class="btn btn-block" style="color: black"><i class="fa fa-free-code-camp"></i><b> freeCodeCamp</b></button></a>
+    </div>
+  </div>
+    <script>
+  $(document).ready(function() {
+    $("hr").children().css("text-align", "center");
+  });
+    </script>
+        <br> <br> <br> <br> <br> <br>
+  <div class="content-wrapper">
+    <div class="text-wrapper">
+      <h1> <a name="About">About </a></h1>
+    <br> <br>
+    <ul style="list-style: none">
+      <img src="./CodePen - Personal Portfolio_files/534028_3808923632291_1416766111_n.jpg" style="height: 100%; separate; border-radius: 50%; width: 50% \9; margin-left: 110%;" class="circle img-thumbnail " align="right" ;="">
+      <li>I'm a self-taught web designer, developer, and software engineer.</li>
+      <li>I'm currently completing a certification program offered by freeCodeCamp for front-end development and am blazing a path of project creation!</li>
+      <li>My passion is to use technology to innovate and create solutions to everday hassles or needs!</li>
+      <li style="font-size: 26px">Competency:</li>
+      <li style="font-size: 24px">Languages &amp; Frameworks:</li>
+      <li>Python, HTML5, CSS3, Bootstrap3, Bootsrap4, Jquery</li>
+      <li style="font-size: 24px">Tools &amp; Expertise:</li>
+      <li>Python IDLE, Notepad++, Codepen</li>
+      </ul>
+      <br> <br>
+    </div>
+    </div>
+  <div class="portFolio">
+    <div class="text-wrapper">
+      <h1> <a name="Portfolio">Portfolio </a></h1>
+      <h4 class="text-center" style="color: white">Below, you'll find some of my most recent work:</h4>
+      <br><br>
+ <div class="container">
+ <div class="row">
+   <div class="col">
+       <a href="https://s.codepen.io/ara4542/debug/VQLqLb/mVMbGEOLwDNr" target="blank" style="display: inline-block">
+         <div class="image">
+<img src="./CodePen - Personal Portfolio_files/louis_xiv_of_francejpg.jpg" class="rounded img-fluid">
+           <h6 style="color:white; padding-top:255px; font-size:12px;margin-right: 25%;">A tribute to King Louis XIV</h6>
+</div>
+  </a>
+   </div>
+   <div class="col">
+       <a href="https://s.codepen.io/ara4542/debug/YjbYKb/XBkGRZqoDBjA" target="blank" style="display: inline-block">
+         <div class="image">
+<img src="./CodePen - Personal Portfolio_files/pj4VtN.png" class="rounded img-fluid">
+           <h6 style="color:white; padding-top:255px; font-size:12px; margin-right: 25%;">Abdel's Survey Form</h6>
+</div>
+  </a>
+   </div>
+   <div class="col">
+       <a href="https://s.codepen.io/ara4542/debug/zmOGNv/WPALYNbvdBGk" target="blank" style="display: inline-block">
+         <div class="image">
+<img src="./CodePen - Personal Portfolio_files/9ANfGU.png" class="rounded img-fluid">
+           <h6 style="color:white; padding-top:255px; font-size:12px; margin-right: 25%;">Abdel's Product Landing Page</h6>
+</div>
+  </a>
+   </div>
+   <div class="col"> 
+     <a href="https://s.codepen.io/ara4542/debug/jZrGyd/VJkxxZeaenyk" target="blank" style="display: inline-block">
+       <img src="./CodePen - Personal Portfolio_files/business_ideas.jpg" class="rounded img-fluid">
+           <h6 style="color:white; padding-top:255px; font-size:12px;" align="left">Personal Portfolio</h6>
+</a></div><a href="https://s.codepen.io/ara4542/debug/jZrGyd/VJkxxZeaenyk" target="blank" style="display: inline-block">
+     </a>
+   </div>
+   </div>
+ </div>
+    </div>
+  <div class="contact">
+    <div class="text-wrapper">
+      <h1> <a name="Contact">Contact </a></h1>
+      <br><br><br><br><br>
+      <p style="color: white; font-size: 25px">Connect with Successful Innovations:</p><p style="color: white; font-size: 25px; margin-top: -20px;">
+      abdel.r.amadou@gmail.com</p><p></p>
+    <div class="text-align: right">
+      <div class="col-sm-4 col">
+      <a href="https://www.linkedin.com/in/abdel-razak-amadou-313bb3140/" target="blank"><button type="button" class="btn btn-block" style="color: black"><i class="fa fa-linkedin"></i><b> LinkedIn</b></button></a>
+    </div> <br>
+    <div class="col-sm-4 col">
+      <a href="https://www.freecodecamp.org/challenges/declare-javascript-variables" target="blank" class="link">
+      <button type="button" class="btn btn-block" style="color: black"><i class="fa fa-free-code-camp"></i><b> freeCodeCamp</b></button></a>
+    </div>
+  </div>
+  </div>
+  </div>
+      <ul style="list-style-type: none; padding-left: 0;">
+      <div class="row" style="margin-right: 0;">
+        <div class="col-xs-3 ">
+      <a class="nav-link" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#Successful">Home</a>
+    
+        </div>
+        <div class="col-xs-3 ">
+     <li class="nav-item">
+      <a class="nav-link" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#About">About</a>
+    </li>
+        </div>
+        <div class="col-xs-3 ">
+    <li class="nav-item">
+      <a class="nav-link" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#Portfolio">Portfolio</a>
+    </li>
+        </div>
+        <div class="col-xs-3 ">
+     <li class="nav-item">
+      <a class="nav-link" href="https://s.codepen.io/ara4542/debug/jZrGyd/NjMYzqZqDxyr#Contact">Contact</a>
+    </li>
+      </div>
+        </div>
+  </ul> 
+    <footer class="text-center"><b class="fa fa-copyright"> <i>Abdel-Razak Amadou: Successful Innovations 2018. All Rights Reserved</i></b></footer>
+    
+
+    </div>
+  
+  
+  
+  
+  
+
+
+
+
+ </div><script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script></body></html>
