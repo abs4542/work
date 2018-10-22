@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://s.codepen.io/ara4542/debug/YjbYKb/WPMLYNWNQqpr -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <title>CodePen - Survey Form</title>
+  
+  
+  
+  
+      <style>
+      body{
+  background-color: #8b99af;
+}
+#title{
+  text-align: center;
+}
+h3{
+  text-align: center;
+  margin-top: -1.5%;
+}
+  #description{
+    text-align: center;
+  }
+
+#survey-form {
+    border-radius: 5px;
+    background-color: #f2f2c2;
+    padding: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 1%;
+}
+.inData label{
+ padding-bottom: 30px;
+ display: inline-block; 
+ width: 40%;
+ text-align: right;
+
+}
+.inData input[type="text"], input[type="email"], input[type="number"]{
+  width: 25%;
+  margin-left: 4em;
+  text-align: left;
+}
+#dropdown{
+  margin-left: 18%;
+  
+}
+select{
+  margin-left: 4em;
+  text-align: left;
+}
+.lineUp{
+  margin-left: 41%;
+  margin-top: -7%;
+}
+.inData input[type="checkbox"]{
+  margin-left: 4em;
+  text-align: left;
+}
+.checkbox-lined{
+  margin-left: 40.5%;
+  margin-top: -4.5%;
+  padding-bottom: 40px;
+}
+textarea{
+  margin-left: 4em;
+  margin-bottom: -7.7%;
+}
+#submit{
+  margin-top: 100px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1.4em;
+  color: black;
+  text-align: center;
+  margin-left: 45%;
+  height: 50px;
+  width: 100px;
+}
+#submit:hover{
+  background-color: cyan;
+  box-shadow: 10px 10px 20px grey;
+  cursor: pointer;
+}
+footer{
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bolder;
+}
+    </style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no">
+
+  
+
+   <link rel="stylesheet" href="./CodePen - Survey Form_files/font-awesome.min.css">
+   
+    <h1 id="title">Abdel's Survey Form</h1>
+    <h3> For <i class="fa fa-free-code-camp"></i>freeCodeCamp</h3>
+    <div class="inData">
+      <form action="https://s.codepen.io/action_page.php" id="survey-form">
+    <p id="description">Let us know how we can improve freeCodeCamp?</p>
+    <label for="name">* Name:</label>
+    <input type="text" id="name" name="fullname" placeholder="Please enter your full name" required=""> 
+    <label for="email">* Email:</label>
+    <input type="email" id="email" name="Email" placeholder="Please enter your email address" required=""> 
+     <label for="age">* Age:</label>
+    <input type="number" id="age" name="Age" placeholder="Please enter your age" min="10" max="104" step="1" required=""> 
+        <label> Which option best describes your role?</label>
+       <select name="status">
+         <option value="student"> Student</option>
+         <option value="fulltimeJob"> Fulltime Job</option>
+         <option value="fulltimeLearner"> Fulltime Learner</option>
+          <option value="other"> Other</option>
+          <option value="n/a"> N/A</option>
+          </select>
+          <div>
+          <label>* How likely is it that you would recommend freeCodeCamp to a friend?</label>
+            <div class="lineUp">
+          <ul style="list-style: none;">
+            <li>
+              <input type="radio" name="radioButtonas" value="abdsolutely" checked="">Absolutely </li>
+            <li>
+              <input type="radio" name="radioButtonas" value="notReally">Not Really</li>
+            <li>
+              <input type="radio" name="radioButtonas" value="maybe">Maybe </li></ul>
+      </div>
+        </div>
+        <br>
+        <label>What do you like the most about FCC?</label>
+        <select name="favorite">
+          <option disabled="" selected="" value="">Select one please</option>
+         <option value="learnOnYourOwnTime"> Learn On Your Own Time</option>
+         <option value="challenges"> Challenges</option>
+         <option value="projects">Projects</option>
+          <option value="community"> Community</option>
+          <option value="openSource">Open Source</option>
+          <option value="other"> Other</option>
+          </select>
+    <label>What do you think can be improved on in the future?</label>
+    <div class="checkbox-lined" <ul="" style="list-style: none;">
+      <li>
+        <input type="checkbox" name="suggestion" value="1">Front-end Projects</li>
+      <li>
+      <input type="checkbox" name="suggestion" value="1">Back-end Projects</li>
+       <li>
+        <input type="checkbox" name="suggestion" value="1">Hints </li>
+      <li>
+      <input type="checkbox" name="suggestion" value="1">City Meetups</li>
+       <li>
+        <input type="checkbox" name="suggestion" value="1">Forum </li>
+      <li>
+      <input type="checkbox" name="suggestion" value="1">Validation of Code By Peers</li>
+    
+    </div>
+<label> Any comments or thought?</label>
+<textarea rows="6" cols="50" name="comment" form="survey-form" placeholder="Enter text here..."></textarea> <br>
+<button type="submit" id="submit">Submit</button>
+  
+</form>
+<footer>© 2018  Abdel-razak Amadou Survey Form <br> for <i class="fa fa-free-code-camp"></i>freeCodeCamp</footer>
+
+  
+  
+  
+  
+  
+
+
+
+
+ </div><script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script></body></html>
