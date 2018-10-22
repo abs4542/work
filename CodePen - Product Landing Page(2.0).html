@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://s.codepen.io/ara4542/debug/zmOGNv/wQrPoNpNQeOM -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <title>CodePen - Product Landing Page(2.0)</title>
+  
+  
+  
+  
+      <style>
+      .music{
+  display: none;
+}
+.background{
+  background-image: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)), url("https://i.ytimg.com/vi/C0pNI7WER3I/maxresdefault.jpg");
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#nav-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: -1%;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: blue;
+  width: 100%;
+}
+#header{
+  float: left;
+  font-size: 30px;
+  font-weight: bolder;
+
+}
+#header-img{
+  margin-left: -40px;
+  height: 50px;
+  width: 80px;
+  margin-bottom: -18px;
+  margin-top: -5px;
+}
+ul{
+  list-style-type: none;
+}
+li{
+  display: inline;
+  float: right;
+  margin-top: .5%;
+}
+li:hover{
+  background-color: white;
+  box-shadow: 5px 5px 20px gray;
+}
+li a:hover{
+  color: black;
+}
+li a:active { 
+  z-index: 999;
+    background-color: yellow;
+}
+
+.nav-link{
+  font-size: 20px;
+  border: 3px solid gray;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+}
+h1{
+  text-align: center;
+  Color: white;
+}
+#form{
+  border-radius: 5px;
+  background-image: linear-gradient(rgba(60, 60, 60, 1), rgba(26, 26, 26, 0)), url("https://infipost.com/wp-content/uploads/2017/03/2016-gsc-bmw-i8-HD.jpg");
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 1%;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 50%;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+h2{
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  font-size: 40px;
+}
+p{
+  line-height: 2em;
+}
+Button{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 15px;
+  height: 30px;
+}
+Button:hover{
+  box-shadow: 5px 5px 20px gray;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 2px solid blue;
+}
+#pauseButton{
+  
+}
+#playButton{
+  
+}
+#drop{
+  margin-left: 42.5%;
+}
+.hide{
+  display: none;
+}
+label{
+  margin-left: 35%;
+  background-color: white;
+  font-weight: bolder;
+}
+#email{
+  margin-left: 2%;
+  width: 200px;
+}
+#submit{
+  margin-top: 20px;
+  background-color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1em;
+  color: black;
+  text-align: center;
+  margin-left: 48%;
+  height: 20px;
+  width: 85px;
+}
+#submit:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 5px 5px 20px gray;
+  border: 2px solid blue;
+  cursor: pointer;
+}
+footer{
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bolder;
+}
+    </style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" class="background">
+
+  
+
+    <link rel="stylesheet" href="./CodePen - Product Landing Page(2.0)_files/font-awesome.min.css">
+
+  <div id="nav-bar">
+    <iframe id="myAudio" loop="" width="0" height="0" class="music" src="./CodePen - Product Landing Page(2.0)_files/X7rdg_tKzKQ.html" frameborder="0" allow="autoplay; loop = 1;" allowfullscreen=""></iframe>
+    <ul>
+  <header id="header"><img src="./CodePen - Product Landing Page(2.0)_files/59bdaa7e8a8c9_BlackKnightsAvatar.jpg.9ac8931061f0efd52772dc64f7a76040.jpg" id="header-img"> Luxury Auto<button id="playButton" type="button">Play Audio</button>
+    <button id="pauseButton" type="button">Pause Audio</button>
+</header>
+      <li> <a class="nav-link" href="https://s.codepen.io/ara4542/debug/zmOGNv/wQrPoNpNQeOM#interested">Interested?</a> </li>
+       <li> <a class="nav-link" href="https://s.codepen.io/ara4542/debug/zmOGNv/wQrPoNpNQeOM#cars">Cars</a> </li>
+      <li> <a class="nav-link" href="https://s.codepen.io/ara4542/debug/zmOGNv/wQrPoNpNQeOM#about">About</a> </li>
+       <li> <a class="nav-link" href="https://s.codepen.io/ara4542/debug/zmOGNv/wQrPoNpNQeOM#home" style="margin-left: .5%;">Home</a> </li>
+  </ul>
+  </div>
+  <br><br>
+  <h1> <a name="home" style="background-color: black;"> Luxury Auto INC!!</a></h1>
+<h1>Welcome To The Best Luxury Car Dealership In the World!</h1>
+
+  <div>
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+      <h2><a name="about">About:</a></h2>
+      <br>
+      <div class="flex-container">
+        <div>
+          <p>Here at Luxury Auto, we pride ourselves on bringing you, our prestigious customers, access to the best luxury cars your money can buy! We offer a variety of amazing cars to wet and sate your appetite  for beautifully designed and fast performing four wheel marvels!</p>
+        </div>
+     <div>
+       <iframe width="500" height="250" src="./CodePen - Product Landing Page(2.0)_files/6T4dBKa8QhM.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+      </div>
+      <br>
+       <h2><a name="cars">Cars:</a></h2>
+      <h3 style="padding-left: 5%; text-align: center; background-color: white;"> In the dropdown menu, please select a car to learn more about it's capabilities and specs!</h3>
+      <br>
+        <select name="car-options" id="drop">
+          <option value="zero">Select...</option>
+          <option value="first">Acura NSX</option>
+          <option value="second">Aston Martin Vanquish</option>
+          <option value="third">Audi R8</option>
+          <option value="fourth">Bentley Flying Spur</option>
+          <option value="fifth">Ferrari 488 GTB</option>
+          <option value="sixth">Lamborghini Aventador</option>
+          <option value="seventh">McLaren 650S</option>
+           <option value="eigth">Mercedes-AMG GT</option>
+          <option value="ninth">Porsche 911 Turbo</option>
+          <option value="tenth">Rolls-Royce Phantom</option>
+      </select>
+      <br><br>
+      <div id="zero">
+      </div>
+     <div class="hide" id="first">
+       <div class="flex-container">
+        <div>
+          <p>The new NSX starts at a whopping $160,000 before options, which are plentiful. That's a lot of money, but then, the NSX really is a dream car. In addition to some of the most exciting, head-turning styling of any car on sale today, Acura's supercar boasts amazing performance from its 573-horsepower turbocharged V6 engine. There's also an advanced all-wheel-drive system and a launch-control transmission, along with a series of electric motors -- all of which conspire to make the NSX one of the most advanced and exciting cars on the market today.</p>
+        </div>
+     <div>
+       <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/VGEyh9i1F64.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+          </div>
+      </div>
+      <div class="hide" id="second">
+        <div class="flex-container">
+        <div>
+          <p>The Aston Martin Vanquish is highly expensive, with a base price of around $295,000 with shipping. It's not as fast as some rivals, as it touts "only" 570 hp, compared to, say, 731 horses in the Ferrari F12. But the Vanquish boasts something none of its rivals can match: one of the most beautiful designs of any modern car on the market today. Perfectly proportioned and distinct from other Aston Martin models, the Vanquish is a dream car simply because we'd love to open the garage door just to look at it. Of course, that excellent exhaust note doesn't hurt, either.</p>
+        </div>
+     <div>
+      <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/2vs2E8H8k1A.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+        </div>
+          </div>
+      <div class="hide" id="third">
+       <div class="flex-container">
+        <div>
+          <p>Although the recently redesigned Audi R8 didn't change its overall style much, we happen to like how the latest model looks. Still futuristic, gorgeous and sporty, the latest model has simply been modernized, especially inside, where the cabin looks more cockpitlike than ever before. Of course, we also love the dual-clutch transmission and the fact that you can get an R8 with more than 600 hp -- an amazing figure which, unfortunately, comes with a base price tag of around $193,000 before options.</p>
+        </div>
+     <div>
+       <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/3gjZXFVRppk.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+          </div>
+      </div>
+      <div class="hide" id="fourth">
+        <div class="flex-container">
+        <div>
+          <p>If you have big money to spend on a new car, do you buy a luxury model or a sports car? With the Bentley Flying Spur, you barely have to choose. Not only does it offer a tremendously well-appointed interior with ridiculous touches such as a champagne cooler and in-car perfume, but the Flying Spur also touts a 616-hp twin-turbocharged W12 engine that can rocket the car to 60 miles per hour in the 4-second realm. In other words, the $202,000-plus Flying Spur is a lot more Jekyll and Hyde than virtually all its rivals, which primarily focus on either performance or luxury -- but not both.</p>
+        </div>
+     <div>
+      <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/_k1YcjFHgtQ.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+          </div>
+        </div>
+          </div>
+  <div class="hide" id="fifth">
+       <div class="flex-container">
+        <div>
+          <p>No list of pricey dream cars would be complete without the latest Ferrari, which in this case is the brand's all-new 488 GTB. Recently released on sale and with a highly sought-after (and even pricier) drop-top Spider version coming soon, the 488 GTB is in such high demand that waiting lists extend well beyond a year. If you're lucky enough to get your hands on one, you'll get a 3.9-liter turbocharged V8 that touts 661 hp and an amazingly fast 7-speed dual-clutch automatic transmission. The only drawback is the price: $250,000 before options for the coupe and much more for the Spider -- not that it matters, since we suspect you probably aren't on the list.</p>
+        </div>
+     <div>
+      <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/MLnjw0cliag.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+          </div>
+      </div>
+      <div class="hide" id="sixth">
+        <div class="flex-container">
+        <div>
+          <p>If you want an exotic sports car that will truly give you the most wild, ridiculous and over-the-top experience possible, you want a Lamborghini Aventador. Take just one look at it, and you'll immediately realize why -- the Aventador offers crazy low-slung styling truly befitting one of the most exotic cars on the market. And it has the price tag to match, with the lineup ranging from a base model with a $400,000 starting price to the new LP7 50-4 SV, which is more like $500,000 before options. If that sounds like a lot, just remember, few other cars combine 700-plus hp and styling that looks like a Hot Wheels toy come to life.</p>
+        </div>
+     <div>
+      <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/vEvBbNe3rqU.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+        </div>
+          </div>
+  <div class="hide" id="seventh">
+       <div class="flex-container">
+        <div>
+          <p>Critics deride the McLaren 650S for a design that's far too similar to its predecessor, the MP4-12C, and stablemates such as the 570S and 675LT. And that may be true, but who cares when the 650S performs so well? The midengine supercar will do 0 to 60 in under 3 seconds, pull a 10-second quarter mile and top out above 200 mph -- all thanks to a 641-hp 3.8-liter twin-turbo V8 and a quick-shifting 7-speed dual-clutch automatic. It's also hard to fault McLaren for the 650S's styling considering just how exotic it looks. Of course, there's a drawback, and that's pricing. The 650S costs more than $260,000 before options, which means we'll likely spend our days dreaming about it rather than driving it.</p>
+        </div>
+     <div>
+       <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/k3a5bgub4xQ.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+          </div>
+      </div> <div class="hide" id="eigth">
+       <div class="flex-container">
+        <div>
+          <p>Mercedes' latest sports car, the Mercedes-AMG GT, follows up on the brand's well-known gull-wing-doored SLS. While the AMG GT doesn't offer gull wing doors, it does tout amazing performance, with the S model offering a twin-turbocharged V8 that makes 503 hp and propels the car to 60 mph in around 3 seconds. The Mercedes-AMG GT also boasts sleek styling, a raucous exhaust note and a surprisingly reasonable base price, at least compared to some of the models on our list -- $131,000 with shipping.</p>
+        </div>
+     <div>
+      <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/acNcfhwP34o.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+          </div>
+      </div>
+      <div class="hide" id="ninth">
+        <div class="flex-container">
+        <div>
+          <p>If you're looking for a world-class performance car that won't stand out too much in your local supermarket parking lot (or the garage at work), the Porsche 911 Turbo is the one you want. Although the base price of around $161,000 might seem steep, the 911 Turbo boasts truly amazing performance numbers -- including 540 hp, a top speed of 198 mph and a 0-to-60 time of just 2.9 seconds. It's also surprisingly practical, touting four seats, all-wheel drive and a lot of today's latest high-tech gadgets and features.</p>
+        </div>
+     <div>
+      <iframe width="500" height="400" src="./CodePen - Product Landing Page(2.0)_files/k7dEsMCFfFw.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+        </div>
+          </div>
+  <div class="hide" id="tenth">
+       <div class="flex-container">
+        <div>
+          <p>Few vehicles say luxury quite like the enormous Rolls-Royce Phantom. Featuring an imposing design and some ridiculous features, such as a fiber-optic roof system that mimics a starry night, the Phantom is today's last word in automotive opulence. And it should be, as the Phantom starts at around $420,000 with shipping for a regular-sedan version or nearly $500,000 for the convertible Phantom Drophead Coupe. While most owners won't care what powers their Phantom as long as it's quiet, the flagship Rolls is surprisingly muscular underneath, boasting a 453-hp 6.75-liter V12 that can motivate it to 60 mph in around 6 seconds.</p>
+        </div>
+     <div>
+       <iframe width="500" height="400" id="video" src="./CodePen - Product Landing Page(2.0)_files/726r_L2C1Z4.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        </div>
+          </div>
+      </div>
+      
+  <script type="text/javascript" id="www-widgetapi-script" src="./CodePen - Product Landing Page(2.0)_files/www-widgetapi.js.download" async=""></script><script src="./CodePen - Product Landing Page(2.0)_files/player_api"></script><script>
+            document
+                .getElementById('drop')
+                .addEventListener('change', function () {
+                    'use strict';
+                    var show = document.querySelector('.show'),   
+                        drop = document.getElementById(this.value);
+                    if (show !== null) {
+                        show.className = 'hide';
+                    }
+                    if (drop !== null ) {
+                        drop.className = 'show';
+                    }
+            });
+        </script>
+      <br>
+      <h2><a name="interested">Interested?</a></h2>
+      <h3 style="padding-left: 5%; text-align: center; background-color: white;"> Are you interested in any of these cars? if so, please input your email address below and submit! We'll get in touch with you as soon as possible!</h3>
+      <br>
+      <label for="email">* Email:</label>
+    <input type="email" id="email" name="Email" placeholder="Please enter your email address" required=""> 
+      <br>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  
+<footer>© 2018  Abdel-razak Amadou Product Landing Page <br> for <i class="fa fa-free-code-camp"></i>freeCodeCamp</footer>
+
+  
+  
+  
+
+    <script>
+      var player;
+
+	// this function gets called when API is ready to use
+	function onYouTubePlayerAPIReady() {
+	  // create the global player from the specific iframe (#video)
+	  player = new YT.Player('myAudio', {
+      loop: 1,
+	    events: {
+	      // call this function when player is ready to use
+	      'onReady': onPlayerReady, 
+        'onStateChange': onPlayerStateChange
+	    }
+	  });
+	}
+
+	function onPlayerReady(event) {
+	  
+	  // bind events
+	  var play = document.getElementById("playButton");
+   play.addEventListener("click", function() {
+          player.playVideo();
+    });
+    var pause = document.getElementById("pauseButton");
+    pause.addEventListener("click", function()
+ {
+      player.pauseVideo();
+    });
+	}
+function onPlayerStateChange(e) {
+    if (e.data === YT.PlayerState.ENDED) {
+      player.playVideo(); 
+    }
+  }
+	// Inject YouTube API script
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/player_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+
+
+
+  
+  
+
+
+
+
+ </div></body></html>
