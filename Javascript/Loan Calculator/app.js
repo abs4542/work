@@ -30,7 +30,7 @@ function calculateResults(){
     //Compute monthly payments needed
     const equation = Math.pow(1 + calculatedInterest, calculatedPayments);
     const monthlyPay = (principal * equation * calculatedInterest)/(equation - 1);
-
+ 
     if(isFinite(monthlyPay)){
         monthlyPayments.value = monthlyPay.toFixed(2);
         totalPayment.value = (monthlyPay * calculatedPayments).toFixed(2);
@@ -49,7 +49,7 @@ function showError(error){
     //hide loader and results
     document.getElementById("results").style.display = "none";
     document.getElementById("loader").style.display = "none";
-    
+
     //create div for alert
     const errorDiv = document.createElement("div");
 
