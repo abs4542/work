@@ -8,15 +8,19 @@ Let player choose to play again
 */
 
 // Game values
+let minInput = document.getElementById("minimum"),
+    maxInput = document.getElementById("maximum"),
+    numOfGuesses = document.querySelector("#guesses");
+
+//add event listener for game
+document.getElementById("button-one").addEventListener("click", addInput);
 let min = document.querySelector(".min-num"), 
     max = document.querySelector(".max-num"),
-    minInput = document.getElementById("minimum"),
-    maxInput = document.getElementById("maximum"),
-    guessBtn = document.querySelector("#guess-btn"),
+    guessBtn = document.getElementById("guess-btn"),
     guessInput = document.querySelector("#guess-input"),
     message = document.querySelector(".message"),
     correctNum = 2,
-    guessesLeft = 3;
+    guessesLeft;
 
  //hide guess number text
  document.getElementById("guess").style.display = "none";
@@ -25,18 +29,77 @@ let min = document.querySelector(".min-num"),
 
  document.getElementById("guess-btn").style.display = "none";
 
-//add event listener for game
-document.getElementById("button-one").addEventListener("click", addInput);
+// check user's input
+guessBtn.addEventListener("click", checkInput);
 
+//create function checkInput
+function checkInput(e){
+    let userGuess = parseInt(guessInput.value);
+    //validate user's guess
+    if(isNaN(userGuess) || userGuess < minInput || userGuess > maxInput){
+        setMessage(`Please enter a number between ${minInput} and ${maxInput}`, "red");
+        // setInterval(function(){
+        //     message.style.opacity = 0;
+        // }, 3000);
+         //change border color
+        guessInput.style.borderColor =  "red";
+        guessInput.style.borderWidth = "thick";
+    }
+
+    //check if guess is correct, game over, user won
+    else if(userGuess === correctNum){
+        guessInput.disabled = true;
+
+        //change border color
+        guessInput.style.borderColor =  "green";
+        guessInput.style.borderWidth = "thick";
+
+        //set message
+        setMessage(`${correctNum} is correct! YOU WIN!!!`, "green");
+    }else{
+        guessesLeft -= 1;
+        console.log(guessesLeft);
+        if(guessesLeft === 0){
+            //game over, user lost
+            guessInput.disabled = true;
+
+            //change border color
+            guessInput.style.borderColor =  "red";
+            guessInput.style.borderWidth = "thick";
+        
+            //set message
+            setMessage(`Game over. You have no more guesses and have lost. The correct number was ${correctNum}!`, "red");
+        }else{
+            //game continues, user has more guesses even though the guess was wrong
+
+            
+            //change border color
+            guessInput.style.borderColor =  "blue";
+            guessInput.style.borderWidth = "thick";
+
+            //clear input
+            guessInput.value = "";
+
+            setMessage(`${userGuess} is not the correct number. You have ${guessesLeft} guess/guesses left.`, "blue");
+        }
+
+
+    }
+        e.preventDefault();
+}
 
 // create function addInput
 function addInput(e){
 
-    if(minInput.value > maxInput.value){
+    if(!minInput.value || !maxInput.value || !numOfGuesses.value){
+        showError("Please input numbers for all values!");
+    }else if(parseInt(minInput.value) > parseInt(maxInput.value)){
         showError("The minimum number must be less than the maximum number!");
-    }else if (minInput.value && maxInput.value){
-        let minInput = document.getElementById("minimum").value,
-        maxInput = document.getElementById("maximum").value;
+    }else{
+        minInput = minInput.value,
+        maxInput = maxInput.value;
+        numOfGuesses = numOfGuesses.value;
+        guessesLeft = parseInt(numOfGuesses);
         //pop in new minimum and maximum numbers
         min.textContent = minInput;
         max.textContent = maxInput;
@@ -47,18 +110,11 @@ function addInput(e){
         document.getElementById("guess-input").style.display = "initial";
 
         document.getElementById("guess-btn").style.display = "initial";
+        document.getElementById("button-one").disabled = true;
+        document.getElementById("minimum").disabled = true;
+        document.getElementById("maximum").disabled = true;
+        document.getElementById("guesses").disabled = true;
 
-        guessBtn.addEventListener("click", function(e){
-            let userGuess = parseInt(guessInput.value);
-            //validate user's guess
-            if(isNaN(userGuess) || userGuess < minInput || userGuess > maxInput){
-                setMessage(`Please enter a number between ${minInput} and ${maxInput}`);
-            }
-            e.preventDefault();
-        });
-
-    }else{
-        showError("Please input numbers for both values!");
     }
 
     e.preventDefault();
@@ -102,7 +158,7 @@ function clearError(){
 }
 
 //create setMessage function
-function setMessage(msg){
-    message.style.color = "red";
+function setMessage(msg, color){
+    message.style.color = color;
     message.textContent = msg;
 }
