@@ -15,11 +15,12 @@ let minInput = document.getElementById("minimum"),
 //add event listener for game
 document.getElementById("button-one").addEventListener("click", addInput);
 let min = document.querySelector(".min-num"), 
+    gameContainer = document.querySelector(".container"),
     max = document.querySelector(".max-num"),
     guessBtn = document.getElementById("guess-btn"),
     guessInput = document.querySelector("#guess-input"),
     message = document.querySelector(".message"),
-    correctNum = 2,
+    correctNum,
     guessesLeft;
 
  //hide guess number text
@@ -31,6 +32,13 @@ let min = document.querySelector(".min-num"),
 
 // check user's input
 guessBtn.addEventListener("click", checkInput);
+
+//play again event listener
+gameContainer.addEventListener("mousedown", function(e){
+    if(e.target.className === "play-again"){
+        window.location.reload();
+    }
+})
 
 //create function checkInput
 function checkInput(e){
@@ -56,12 +64,15 @@ function checkInput(e){
 
         //set message
         setMessage(`${correctNum} is correct! YOU WIN!!!`, "green");
-    }else{
+         //play again?
+         guessBtn.value = "play Again";
+         guessBtn.className  += "play-again";
+   }else{
         guessesLeft -= 1;
         console.log(guessesLeft);
-        if(guessesLeft === 0){
+        if(guessesLeft <= 0){
             //game over, user lost
-            guessInput.disabled = true;
+            //guessInput.disabled = true;
 
             //change border color
             guessInput.style.borderColor =  "red";
@@ -69,6 +80,9 @@ function checkInput(e){
         
             //set message
             setMessage(`Game over. You have no more guesses and have lost. The correct number was ${correctNum}!`, "red");
+            //play again?
+            guessBtn.value = "play Again";
+            guessBtn.className  += "play-again";
         }else{
             //game continues, user has more guesses even though the guess was wrong
 
@@ -115,6 +129,8 @@ function addInput(e){
         document.getElementById("maximum").disabled = true;
         document.getElementById("guesses").disabled = true;
 
+        correctNum = getWinningNum(parseInt(minInput), parseInt(maxInput))
+        console.log(correctNum);
     }
 
     e.preventDefault();
@@ -161,4 +177,9 @@ function clearError(){
 function setMessage(msg, color){
     message.style.color = color;
     message.textContent = msg;
+}
+
+//create function getWinningNum
+function getWinningNum(minInput, maxInput){
+    return Math.floor(Math.random()*(maxInput - (minInput + 1)) + minInput);
 }
